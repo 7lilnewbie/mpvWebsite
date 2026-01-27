@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Captions,
   Folder,
@@ -34,25 +34,6 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export function FeaturesSection() {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
     <section
       id="features"
@@ -74,22 +55,15 @@ export function FeaturesSection() {
           </p>
         </div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature) => (
             <motion.div
               key={feature.id}
-              variants={itemVariants}
               whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.2 },
               }}
-              className="feature-card relative overflow-hidden bg-foreground/[0.03] dark:bg-white/2 backdrop-blur-md border border-foreground/5 dark:border-white/5 rounded-3xl p-8 hover:bg-foreground/[0.05] dark:hover:bg-white/4 hover:border-primary/30 transition-all duration-300 cursor-pointer group flex flex-col items-center text-center"
+              className="feature-card relative overflow-hidden bg-foreground/3 dark:bg-white/2 backdrop-blur-md border border-foreground/5 dark:border-white/5 rounded-3xl p-8 hover:bg-foreground/5 dark:hover:bg-white/4 hover:border-primary/30 transition-all duration-300 cursor-pointer group flex flex-col items-center text-center"
             >
               <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -106,7 +80,7 @@ export function FeaturesSection() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

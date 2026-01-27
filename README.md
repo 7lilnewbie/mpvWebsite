@@ -1,43 +1,64 @@
-# mpvExtended Website
+<div align="center">
+  <img src="public/featureGraphic.png" width="100%" alt="mpvExtended Banner" />
 
-The official website for **mpvExtended**, an advanced mpv-based video player for Android. Built with performance, aesthetics, and user experience in mind.
+**The Most Powerful, Material3-Powered Video Experience for Android**
 
-## ✨ Features
+[![GitHub release](https://img.shields.io/github/v/release/marlboro-advance/mpvEx?style=for-the-badge&logo=github&color=7C3AED)](https://github.com/marlboro-advance/mpvEx/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/marlboro-advance/mpvEx/total?style=for-the-badge&logo=github&color=3B82F6)](https://github.com/marlboro-advance/mpvEx/releases/latest)
+[![Stars](https://img.shields.io/github/stars/marlboro-advance/mpvEx?style=for-the-badge&logo=github&color=F59E0B)](https://github.com/marlboro-advance/mpvEx/stargazers)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green?style=for-the-badge)](LICENSE)
 
-- **Premium Design**: Modern "Electric" aesthetic with Glassmorphism and Material3 principles.
-- **Dynamic Themes**: Seamless switching between "Cream" Light mode and "OLED" Dark mode.
-- **Responsive Layout**: Optimized for everything from mobile phones up to ultra-wide displays.
-- **Interactive Previews**: Beautiful screenshot showcase and feature breakdowns.
-- **Real-time Data**: Fetches latest release information and star counts directly from GitHub.
-
-## 🚀 Tech Stack
-
-- **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Deployment**: [Vercel](https://vercel.com/)
-
-## 🛠️ Getting Started
-
-First, install the dependencies:
-
-```bash
-pnpm install
-```
-
-Then, run the development server:
-
-```bash
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## 📄 License
-
-This project is licensed under the **Apache 2.0 License**.
+</div>
 
 ---
 
-Created by **marlboro-advance** | Website Branding & Polish by **[Ritesh Pandit](https://riteshdpandit.vercel.app/)**
+## 🚀 Installation
+
+### Stable Builds
+
+Get the latest stable release directly from GitHub or the IzzyOnDroid repository.
+
+| Source              | Link                                                                                                                                                              |
+| :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **GitHub Releases** | [![Download](https://img.shields.io/badge/Download-Latest%20APK-7C3AED?style=flat-square&logo=github)](https://github.com/marlboro-advance/mpvEx/releases/latest) |
+| **IzzyOnDroid**     | [![IzzyOnDroid](https://img.shields.io/badge/Get%20it%20on-IzzyOnDroid-blue?style=flat-square)](https://apt.izzysoft.de/packages/app.marlboroadvance.mpvex)       |
+
+### Preview Builds
+
+Want to try the cutting-edge features? Download the preview builds (Testing only).
+[![Preview](https://img.shields.io/badge/Download-Preview%20Builds-red?style=for-the-badge)](https://marlboro-advance.github.io/mpvEx/)
+
+---
+
+## 🛠️ Building from Source
+
+### Prerequisites
+
+- JDK 17
+- Android SDK (Build Tools 34.0.0+)
+- Git
+
+### Build Variants
+
+- **universal**: Single APK for all architectures.
+- **arm64-v8a**: Optimized for modern devices (**Recommended**).
+- **armeabi-v7a**: For older hardware.
+- **x86 / x86_64**: For emulators or Intel-based devices.
+
+---
+
+## 🤝 Acknowledgments
+
+We stand on the shoulders of giants:
+
+- [mpv-android](https://github.com/mpv-android) - The foundation.
+- [mpvKt](https://github.com/abdallahmehiz/mpvKt) & [Next player](https://github.com/anilbeesetti/nextplayer) - Inspiration.
+- [Gramophone](https://github.com/FoedusProgramme/Gramophone) - UI paradigms.
+
+---
+
+## ❤️ Support & Community
+
+If you love mpvExtended, consider supporting the development and starring the repo!
+
+**WebsiteCreated with ❤️ by [Riteshp2001](https://github.com/Riteshp2001)**

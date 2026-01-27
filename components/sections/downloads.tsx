@@ -1,37 +1,27 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
-import { ArrowRight, Beaker, Github, Package } from "lucide-react";
-import type React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Beaker, Github } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { downloadOptions } from "@/lib/data";
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <Github className="w-8 h-8 text-foreground" />,
   zap: <Beaker className="w-8 h-8 text-red-500" />,
-  download: <Package className="w-8 h-8 text-blue-500" />,
+  download: (
+    <div className="relative w-32 h-12">
+      <Image
+        src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroidButtonGreyBorder_nofont.png"
+        alt="Get it at IzzyOnDroid"
+        fill
+        className="object-contain"
+      />
+    </div>
+  ),
 };
 
 export function DownloadsSection() {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
   return (
     <section className="py-32 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
       {/* Background Lighting */}
@@ -48,22 +38,15 @@ export function DownloadsSection() {
           premium playback today.
         </p>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {downloadOptions.map((option) => (
             <motion.div
               key={option.id}
-              variants={itemVariants}
               whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.2 },
               }}
-              className="download-card relative overflow-hidden bg-foreground/[0.03] dark:bg-white/2 backdrop-blur-md border border-foreground/5 dark:border-white/5 rounded-3xl p-8 flex flex-col items-center text-center hover:bg-foreground/[0.05] dark:hover:bg-white/4 hover:border-secondary/30 transition-all duration-300 group"
+              className="download-card relative overflow-hidden bg-foreground/3 dark:bg-white/2 backdrop-blur-md border border-foreground/5 dark:border-white/5 rounded-3xl p-8 flex flex-col items-center text-center hover:bg-foreground/5 dark:hover:bg-white/4 hover:border-secondary/30 transition-all duration-300 group"
             >
               <div className="absolute inset-0 bg-linear-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -87,7 +70,7 @@ export function DownloadsSection() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

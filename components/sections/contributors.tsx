@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -24,25 +24,6 @@ export function ContributorsSection() {
     fetchContributors();
   }, []);
 
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
   return (
     <section id="contributors" className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
       <div className="max-w-6xl mx-auto">
@@ -60,17 +41,10 @@ export function ContributorsSection() {
             <div className="text-muted-foreground">Loading contributors...</div>
           </div>
         ) : (
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
-          >
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {contributors.slice(0, 20).map((contributor) => (
               <motion.a
                 key={contributor.login}
-                variants={itemVariants}
                 whileHover={{ y: -10 }}
                 transition={{ duration: 0.3 }}
                 href={contributor.html_url}
@@ -100,7 +74,7 @@ export function ContributorsSection() {
                 </div>
               </motion.a>
             ))}
-          </motion.div>
+          </div>
         )}
 
         <div className="text-center mt-12">

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const screenshots = [
@@ -37,26 +37,6 @@ const screenshots = [
 ];
 
 export function ScreenshotsSection() {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 40, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
     <section
       id="screenshots"
@@ -78,17 +58,10 @@ export function ScreenshotsSection() {
         </div>
 
         <div className="flex justify-start overflow-x-auto pb-12 pt-12 pl-4 md:pl-32 pr-4 md:pr-32 scrollbar-hide">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex flex-nowrap items-center gap-6 md:gap-12 perspective-[1000px]"
-          >
+          <div className="flex flex-nowrap items-center gap-6 md:gap-12 perspective-[1000px]">
             {screenshots.map((screenshot) => (
               <motion.div
                 key={screenshot.id}
-                variants={itemVariants}
                 whileHover={{
                   scale: 1.08,
                   zIndex: 20,
@@ -113,7 +86,7 @@ export function ScreenshotsSection() {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
