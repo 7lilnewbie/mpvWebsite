@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
-    optimizePackageImports: ["lucide-react", "gsap", "date-fns"],
+    optimizePackageImports: ["lucide-react", "date-fns"],
   },
 };
 
