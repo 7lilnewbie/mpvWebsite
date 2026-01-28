@@ -30,20 +30,53 @@ Want to try the cutting-edge features? Download the preview builds (Testing only
 
 ---
 
-## 🛠️ Building from Source
+## 🌐 mpvEx Web
 
-### Prerequisites
+This is the official Next.js website for **mpvExtended** - a powerful Android video player built on mpv. The website showcases features, provides downloads, and serves as the project's online presence.
 
-- JDK 17
-- Android SDK (Build Tools 34.0.0+)
-- Git
+### 🚀 Quick Start
 
-### Build Variants
+```bash
+# Development
+pnpm dev           # Start dev server
+pnpm dev:debug     # Start with debugging
 
-- **universal**: Single APK for all architectures.
-- **arm64-v8a**: Optimized for modern devices (**Recommended**).
-- **armeabi-v7a**: For older hardware.
-- **x86 / x86_64**: For emulators or Intel-based devices.
+# Dependencies Chart
+pnpm analyze       # Analyze dependencies
+
+# Building
+pnpm build         # Build for production
+pnpm start         # Start production server
+pnpm start:prod    # Start on port 3000
+
+# Code Quality
+pnpm lint          # Run linter
+pnpm lint:fix      # Auto-fix lint issues
+pnpm format        # Format code
+pnpm type-check    # TypeScript checking
+
+# Maintenance
+pnpm clean         # Clean build artifacts
+pnpm reinstall     # Full reinstall
+
+```
+
+## 📦 Project Structure
+
+- Framework: Next.js 16.1.5 with React 19.2.4
+- Styling: Tailwind CSS 4.1.18 with Material Design
+- Language: TypeScript
+- Linting: Biome for formatting and linting
+- Icons: Lucide React & custom icons
+
+
+## 🎯 Features
+
+- Modern Stack: Built with Next.js 16, React 19, and TypeScript
+- Responsive Design: Tailwind CSS with Material Design principles
+- Performance Optimized: Automated code splitting and optimization
+- Type Safe: Full TypeScript coverage with strict type checking
+- Code Quality: Biome for consistent code formatting and linting
 
 ---
 
@@ -61,4 +94,4 @@ We stand on the shoulders of giants:
 
 If you love mpvExtended, consider supporting the development and starring the repo!
 
-**WebsiteCreated with ❤️ by [Riteshp2001](https://github.com/Riteshp2001)**
+**Website Created with ❤️ by [Riteshp2001](https://github.com/Riteshp2001)**
