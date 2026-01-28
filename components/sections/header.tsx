@@ -72,7 +72,7 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-foreground/80 hover:text-primary transition-all text-sm px-4 py-2 hover:bg-foreground/5 rounded-full relative overflow-hidden group"
+              className="text-foreground/80 hover:text-primary transition-all text-sm px-4 py-2 hover:bg-foreground/5 rounded-full relative overflow-hidden group font-bold"
               onClick={(e) => {
                 e.preventDefault();
                 document

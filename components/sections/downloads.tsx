@@ -1,18 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Beaker, Github } from "lucide-react";
+import { ArrowRight, FlaskConical, Github } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { downloadOptions } from "@/lib/data";
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <Github className="w-8 h-8 text-foreground" />,
-  zap: <Beaker className="w-8 h-8 text-red-500" />,
+  zap: <FlaskConical className="w-8 h-8 text-red-500" />,
   download: (
     <div className="relative w-32 h-12">
       <Image
-        src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroidButtonGreyBorder_nofont.png"
+        src="/izzy.svg"
         alt="Get it at IzzyOnDroid"
         fill
         className="object-contain"
@@ -22,6 +22,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export function DownloadsSection() {
+  FlaskConical
   return (
     <section className="py-32 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
       {/* Background Lighting */}
@@ -54,7 +55,7 @@ export function DownloadsSection() {
                 <div className="mb-6 text-secondary flex justify-center transition-transform duration-500 group-hover:scale-110">
                   {iconMap[option.icon]}
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-3 group-hover:text-secondary transition-colors">
+                <h3 className="text-2xl font-semibold text-foreground mb-3 ">
                   {option.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-8 grow text-sm">
