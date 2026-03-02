@@ -116,6 +116,15 @@ export function HeroSection({ version }: { version?: string }) {
           </Button>
         </motion.div>
 
+       {/* Hero Image after the buttons */}
+       <motion.img
+         variants={itemVariants}
+         src="/public/player.png"
+         alt="Hero Image"
+         className="mt-8 max-w-screen-lg w-full rounded-lg shadow-lg"
+      />
+    </motion.div>
+
         {/* Stats Grid */}
         <motion.div
           variants={itemVariants}
