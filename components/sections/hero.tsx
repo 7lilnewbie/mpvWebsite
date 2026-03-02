@@ -122,8 +122,7 @@ export function HeroSection({ version }: { version?: string }) {
          src="/public/player.png"
          alt="Hero Image"
          className="mt-8 max-w-screen-lg w-full rounded-lg shadow-lg"
-      />
-    </motion.div>
+       >
 
         {/* Stats Grid */}
         <motion.div
@@ -155,6 +154,7 @@ export function HeroSection({ version }: { version?: string }) {
             <span className="text-sm text-muted-foreground">Free & Open</span>
           </div>
         </motion.div>
+       </motion.img>
       </motion.div>
     </section>
   );
