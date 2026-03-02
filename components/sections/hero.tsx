@@ -119,7 +119,7 @@ export function HeroSection({ version }: { version?: string }) {
        {/* Hero Image after the buttons */}
        <motion.img
          variants={itemVariants}
-         src="/public/player.png"
+         src="/player.png"
          alt="Hero Image"
          className="mt-8 max-w-screen-lg w-full rounded-lg shadow-lg"
        >
