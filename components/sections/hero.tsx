@@ -109,7 +109,7 @@ export function HeroSection({ version }: { version?: string }) {
           <Button
             size="lg"
             variant="outline"
-            className="h-12 px-8 text-base text-foreground underline rounded-full transition-all duration-300"
+            className="text-base text-foreground underline hover:opacity-70 transition-opacity duration-300"
             onClick={() => window.open(siteConfig.links.github, "_blank")}
           >
             View on GitHub
@@ -120,8 +120,8 @@ export function HeroSection({ version }: { version?: string }) {
        <motion.img
          variants={itemVariants}
          src="/player.png"
-         alt="Hero Image"
-         className="max-w-screen-md w-full rounded-lg shadow-lg"
+         alt="MpvEx Player Image"
+         className="mt-0 max-w-screen-md w-full rounded-lg shadow-lg"
        >
      </motion.img>
 
