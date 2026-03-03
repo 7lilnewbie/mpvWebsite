@@ -115,13 +115,12 @@ export function HeroSection({ version }: { version?: string }) {
             View on GitHub
           </Button>
         </motion.div>
-
        {/* Hero Image after the buttons */}
        <motion.img
          variants={itemVariants}
          src="/player.png"
          alt="Hero Image"
-         className="mt-0 max-w-screen-md w-full rounded-xl shadow-lg"
+         className="mt-0 max-w-screen-md w-full mx-auto rounded-2xl shadow-lg"
        >
      </motion.img>
 
