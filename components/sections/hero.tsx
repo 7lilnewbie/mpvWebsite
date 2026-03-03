@@ -109,18 +109,19 @@ export function HeroSection({ version }: { version?: string }) {
           <Button
             size="lg"
             variant="outline"
-            className="h-12 px-8 text-base border-foreground/10 bg-foreground/5 hover:bg-foreground/10 text-foreground backdrop-blur-sm rounded-full transition-all duration-300"
+            className="h-12 px-8 text-base text-foreground underline rounded-full transition-all duration-300"
             onClick={() => window.open(siteConfig.links.github, "_blank")}
           >
             View on GitHub
           </Button>
         </motion.div>
+        
        {/* Hero Image after the buttons */}
        <motion.img
          variants={itemVariants}
          src="/player.png"
          alt="Hero Image"
-         className="mt-0 max-w-screen-md w-full mx-auto rounded-2xl shadow-lg"
+         className="max-w-screen-md w-full rounded-lg shadow-lg"
        >
      </motion.img>
 
