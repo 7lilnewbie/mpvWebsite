@@ -121,7 +121,7 @@ export function HeroSection({ version }: { version?: string }) {
          variants={itemVariants}
          src="/player.png"
          alt="Hero Image"
-         className="mt-2 max-w-screen-md w-full rounded-xl shadow-lg"
+         className="mt-0 max-w-screen-md w-full rounded-xl shadow-lg"
        >
      </motion.img>
 
